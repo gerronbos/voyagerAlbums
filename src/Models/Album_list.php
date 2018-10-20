@@ -22,6 +22,10 @@ class Album_list extends Model
         }
         return $return;
     }
+    public function getThumbAttribute(){
+        $item = $this->items()->first();
+        return $item->thumb;
+    }
 
     public function amountPhotos(){
         $return = 0;
