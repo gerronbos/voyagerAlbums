@@ -84,16 +84,16 @@ class VoyagerAlbumsTable extends Migration
         $setting->save();
 
         $setting2 = new Setting();
-        $setting2->key = "socialmedia.fb_page_id";
-        $setting2->display_name = "Facebook page id";
+        $setting2->key = "socialmedia.fb_client_id";
+        $setting2->display_name = "Facebook client id";
         $setting2->type = "text";
         $setting2->order = Setting::where("group",'=',"socialmedia")->count() + 1;
         $setting2->group = "socialmedia";
         $setting2->save();
 
         $setting3 = new Setting();
-        $setting3->key = "socialmedia.fb_page_id";
-        $setting3->display_name = "Facebook page id";
+        $setting3->key = "socialmedia.fb_client_secret";
+        $setting3->display_name = "Facebook client secret";
         $setting3->type = "text";
         $setting3->order = Setting::where("group",'=',"socialmedia")->count() + 1;
         $setting3->group = "socialmedia";
